@@ -44,7 +44,7 @@ int EVP_PKEY_CTX_set_rsa_pss_saltlen(EVP_PKEY_CTX *, int);
 int EVP_PKEY_CTX_set_rsa_mgf1_md(EVP_PKEY_CTX *, EVP_MD *);
 int EVP_PKEY_CTX_set0_rsa_oaep_label(EVP_PKEY_CTX *, unsigned char *, int);
 
-int EVP_PKEY_CTX_set_rsa_oaep_md(EVP_PKEY_CTX *, EVP_MD *);
+int EVP_PKEY_CTX_set_rsa_oaep_md(EVP_PKEY_CTX *, const EVP_MD *);
 """
 
 CUSTOMIZATIONS = """
