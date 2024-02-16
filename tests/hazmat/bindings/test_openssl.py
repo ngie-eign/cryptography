@@ -109,7 +109,6 @@ class TestOpenSSL(object):
         error = exc_info.value.err_code[0]
         assert error.code == 101183626
         assert error.lib == b.lib.ERR_LIB_EVP
-        assert error.func == b.lib.EVP_F_EVP_ENCRYPTFINAL_EX
         assert error.reason == b.lib.EVP_R_DATA_NOT_MULTIPLE_OF_BLOCK_LENGTH
         assert b"data not multiple of block length" in error.reason_text
 

@@ -181,7 +181,14 @@ def cryptography_has_evp_pkey_get_set_tls_encodedpoint():
     ]
 
 
-def cryptography_has_fips():
+def cryptography_has_300_fips():
+    return [
+        "EVP_default_properties_enable_fips",
+        "EVP_default_properties_is_fips_enabled",
+    ]
+
+
+def cryptography_has_legacy_fips():
     return [
         "FIPS_mode_set",
         "FIPS_mode",
@@ -327,7 +334,8 @@ CONDITIONAL_NAMES = {
     "Cryptography_HAS_EVP_PKEY_get_set_tls_encodedpoint": (
         cryptography_has_evp_pkey_get_set_tls_encodedpoint
     ),
-    "Cryptography_HAS_FIPS": cryptography_has_fips,
+    "Cryptography_HAS_300_FIPS": cryptography_has_300_fips,
+    "Cryptography_HAS_LEGACY_FIPS": cryptography_has_legacy_fips,
     "Cryptography_HAS_SIGALGS": cryptography_has_ssl_sigalgs,
     "Cryptography_HAS_PSK": cryptography_has_psk,
     "Cryptography_HAS_CUSTOM_EXT": cryptography_has_custom_ext,
